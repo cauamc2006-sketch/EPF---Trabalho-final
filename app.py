@@ -26,3 +26,5 @@ class App:
 
 def create_app():
     return App()
+
+#commmit teste
