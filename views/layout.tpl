@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Bottle - {{title or 'Sistema'}}</title>
-    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Jogos St0re - {{title or 'Sistema'}}</title>
+    <link rel="shortcut icon" href="/static/img/controle-16.ico" type="image/x-icon>
 </head>
 <body>
 

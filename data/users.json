@@ -1,9 +1,14 @@
 [
     {
         "id": 1,
-        "name": "UsuÃ¡rio Teste",
+        "name": "UsuÃÂ¡rio Teste",
         "email": "uduarioteste@email.com",
         "birthdate": "1999-10-21"
-        
+    },
+    {
+        "id": 2,
+        "name": "Usuario Testy",
+        "email": "uduarioteste@email.com",
+        "birthdate": "1999-10-21"
     }
 ]
