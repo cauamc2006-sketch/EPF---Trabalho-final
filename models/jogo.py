@@ -15,9 +15,10 @@ class Jogo:
             print(f"Preço atualizado com sucesso!!!, seu preço agora é R${novo_preco}")  
 
 
-j1 = Jogo(2,"Resident-Eviel", 200 , "terror")
+j3 = Jogo(2,"Resident-Eviel", 200 , "terror")
 
-print(j1.preco)
-    
+#print(j1.preco)
+
+
 
     
