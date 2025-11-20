@@ -7,7 +7,7 @@ class Config:
     HOST = 'localhost'
     PORT = 8080
     DEBUG = True
-    RELOADER = True
+    RELOADER = False
 
     # Paths
     TEMPLATE_PATH = os.path.join(BASE_DIR, 'views')

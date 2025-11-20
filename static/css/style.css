@@ -20,18 +20,48 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: #f9f9f9;
+  background-color: rgb(25, 34, 44);
   padding: 0;
   margin: 0;
 }
 
 /* Layout */
 .container {
-  max-width: 1200px;
+  max-width: 900px;
+
   margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
+  padding-bottom: 10px;
+  background: rgb(42, 54, 67);
+  border-radius: 3px;
   box-shadow: var(--shadow);
 }
+.hero{
+  background-image: url(../img/cave-insidee.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:300px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 3px;
+  color: rgb(214, 206, 206);
+}
+.hero h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.bnt-hero{
+  padding-bottom: 20px;
+  color: #2ecc71;
+  border-bottom: #2ecc71;
+  
+
+}
