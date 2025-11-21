@@ -3,8 +3,8 @@
 
     <div class="hero">
         
-        <h1>Seu próximo jogos épico começa aqui!</h1>
-        <a class="bnt-hero" href="/games">EXPLORE GAMES</a> <!-- /games ainda nao foi feito-->>
+        <h1>jogos épicos aqui</h1>
+        <a class="bnt-hero" href="/games">EXPLORAR JOGOS</a> <!-- /games ainda nao foi feito-->
     </div>
 
     <div class="container">
