@@ -32,16 +32,17 @@ body {
 
   margin: 20px auto;
   padding-bottom: 30px;
-  background: rgb(20, 6, 56);
+  background: rgb(31, 39, 47);
   border-radius: 3px;
   box-shadow: var(--shadow);
+  
 }
 .hero{
   background-image: url(../img/cave-insidee.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height:200px;
+  height: 175px;
 
   display: flex;
   flex-direction: column;
@@ -67,6 +68,8 @@ body {
   border-bottom: #2ecc71;
   border-radius: 20px;
   text-decoration: none;
+  padding-top: 10px;
+  margin-top: 15px;
 }
 
 .header{
@@ -133,4 +136,47 @@ body {
   padding: 8px 15px;
 }
 .nav-menu a:hover {
-background: #2ecc71;}
+background: #2ecc71;
+}
+.categorias{
+  padding: 8px 18px;
+  color:white;
+  background: #34db34;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.tit-principal{
+  padding-left: 70px;
+  padding-top: 30px;
+  height: auto;
+  font-size: 20px;
+}
+.jogo {
+    position: relative;
+    width: 250px;
+    padding-top: 40px;
+    padding-left: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    
+    margin: 20px;
+    
+}
+
+.jogo img {
+    width: 100%;
+    border-radius: 10px;
+    display:block;
+}
+
+.jogo .margem-jogos {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(0,0,0, 0.6);
+  backdrop-filter: blur(4px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}

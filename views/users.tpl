@@ -2,7 +2,8 @@
 
 <section class="users-section">
     <div class="section-header">
-        <h1 class="section-title"><i class="fas fa-users"></i> 🎮 USUÁRIOS 🎮</h1>
+        <h1 class="section-title"><i class="fas fa-users"></i> 🎮 LOJINHA DE JOGOS 🎮</h1>
+         <img src="static/img/ori-650.jpg" alt="teste">
          <a href="/users/add" class="btn btn-primary">
            <i class="fas fa-plus"></i> Novo Usuário
         </a>
