@@ -151,16 +151,27 @@ background: #2ecc71;
   height: auto;
   font-size: 20px;
 }
+
+.jogos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px; 
+  padding: 30px;
+  margin-left: 37px;
+}
+.jogos-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .jogo {
+    width: 200px;
     position: relative;
-    width: 250px;
-    padding-top: 40px;
-    padding-left: 50px;
+    background:rgb(31,39,47);
     border-radius: 12px;
     overflow: hidden;
-    
-    margin: 20px;
-    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .jogo img {
@@ -179,4 +190,17 @@ background: #2ecc71;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
+}
+.preço {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34db34;
+}
+.titulo-jogo {
+    margin: 0;
+    font-size: 18px;
+}
+.categoria {
+    font-size: 13px;
+    opacity: 0.8;
 }
