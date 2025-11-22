@@ -4,7 +4,7 @@
   --secondary-color: #2980b9;
   --danger-color: #e74c3c;
   --success-color: #2ecc71;
-  --text-color: #333;
+  --text-color: #e8e2e2;
   --light-gray: #f5f5f5;
   --border-color: #ddd;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -17,21 +17,190 @@
 }
 
 body {
+  padding-top: 75px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: #f9f9f9;
-  padding: 0;
+  background-color: rgb(57, 71, 88);
   margin: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 /* Layout */
 .container {
-  max-width: 1200px;
+  max-width: 900px;
+
   margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
+  padding-bottom: 30px;
+  background: rgb(31, 39, 47);
+  border-radius: 3px;
   box-shadow: var(--shadow);
+  
+}
+.hero{
+  background-image: url(../img/cave-insidee.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 175px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 3px;
+  color: white;
+}
+.hero h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+.bnt-hero{
+  padding: 8px 18px;
+  background:#34db34;
+  color:white;
+  border-bottom: #2ecc71;
+  border-radius: 20px;
+  text-decoration: none;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.header{
+  width: 100%;
+  height: 75px;
+  background: rgb(31, 39, 47);
+  color:white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.header-cn {
+  width: 67%;
+  max-width: 1000px;
+
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10px;
+}
+.logo{
+  height: 60px;
+  width: auto;
+}
+.btn-login{
+  padding: 8px 18px;
+  color:white;
+  background: #34db34;
+  border-radius: 20px;
+  text-decoration: #34db34;
+}
+.btn-login a:hover{
+  background: #2980b9;
+}
+.carrinho-aba{
+  padding: 8px 18px;
+  color:white;
+  background: #34db34;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.barra-pesquisa{
+  padding: 8px 18px;
+  background: rgb(57, 71, 88);
+  color:rgb(250, 250, 250);
+  border-radius: 15px;
+}
+.nav-menu a {
+  background: #34db34;
+  color:#ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+.nav-menu a:hover {
+background: #2ecc71;
+}
+.categorias{
+  padding: 8px 18px;
+  color:white;
+  background: #34db34;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.tit-principal{
+  padding-left: 70px;
+  padding-top: 30px;
+  height: auto;
+  font-size: 20px;
+}
+
+.jogos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px; 
+  padding: 30px;
+  margin-left: 37px;
+}
+.jogos-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.jogo {
+    width: 200px;
+    position: relative;
+    background:rgb(31,39,47);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.jogo img {
+    width: 100%;
+    border-radius: 10px;
+    display:block;
+}
+
+.jogo .margem-jogos {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(0,0,0, 0.6);
+  backdrop-filter: blur(4px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+.preço {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34db34;
+}
+.titulo-jogo {
+    margin: 0;
+    font-size: 18px;
+}
+.categoria {
+    font-size: 13px;
+    opacity: 0.8;
+}

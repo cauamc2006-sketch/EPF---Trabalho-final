@@ -19,7 +19,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            background: #f9f9f9;
+            background: #920d0dff;
             color: #333;
         }
         h1, h2 {

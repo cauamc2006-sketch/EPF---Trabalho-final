@@ -2,9 +2,10 @@
 
 <section class="users-section">
     <div class="section-header">
-        <h1 class="section-title"><i class="fas fa-users"></i> Gestão de Usuários</h1>
-        <a href="/users/add" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Novo Usuário
+        <h1 class="section-title"><i class="fas fa-users"></i> 🎮 LOJINHA DE JOGOS 🎮</h1>
+         <img src="static/img/ori-650.jpg" alt="teste">
+         <a href="/users/add" class="btn btn-primary">
+           <i class="fas fa-plus"></i> Novo Usuário
         </a>
     </div>
 
@@ -16,12 +17,14 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
-                    <th>Data Nasc.</th>
+                    <th>Data de Nascimento</th>
                     <th>Ações</th>
+                    <th>🛒</th>
                 </tr>
             </thead>
 
             <tbody>
+           
                 % for u in users:
                 <tr>
                     <td>{{u.id}}</td>
