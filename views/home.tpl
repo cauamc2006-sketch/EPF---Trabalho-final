@@ -30,7 +30,7 @@
         </a>    </div>    
             </div>
         
-
+        <a href="...">
             <div class="jogo">
                 <img src="/static/img/lnmaress.webp" alt="/j4"loading="lazy">
                 
@@ -41,9 +41,9 @@
                         <p class="preço">R$199,90</p>
                 </div>
             </div> 
+        </a>
 
-
-
+        <a href="...">
             <div class="jogo">
                 <img src="/static/img/reddeadd.webp" alt="j4"loading="lazy">
                 
@@ -54,7 +54,20 @@
                         <p class="preço">R$199,90</p>
                 </div>
             </div> 
+        </a>
 
+        <a href="...">
+            <div class="jogo">
+                <img src="/static/img/narutoo.webp" alt="j5"loading="lazy">
+                
+                <div class="margem-jogos">
+
+                        <h3 class="titulo-jogo">Naruto Storm 4</h3>
+                        <p class="categoria">Luta</p>
+                        <p class="preço">R$199,90</p>
+                </div>
+            </div> 
+        </a>
         </div>
 
     </div>

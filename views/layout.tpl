@@ -22,7 +22,7 @@
         <a href="/carrinho" class="carrinho-aba">CARRINHO</a>   
                  
         <a href="/categorias" class="categorias">CATEGORIAS</a>
-        <a href="/login" class="btn-login">LOGIN</a>
+        <a href="/users/add" class="btn-login">LOGIN</a>
         
         <input type="text" class="barra-pesquisa" placeholder="🔍PESQUISAR...">
     </div>
