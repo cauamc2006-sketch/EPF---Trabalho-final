@@ -29,16 +29,7 @@ class Carrinho:
 
   
         
-#j1 = Jogo(3, "Fortnite", 200, "Battle royale")
-#j2 = Jogo(2,"Resident Evil", 200 , "terror")
 
-#c1 = Carrinho()
-
-#c1.adicionar_jogo(j1)
-#c1.adicionar_jogo(j2)
-#c1.exibir_lista()
-
-#c1.calcular_total()
        
        
     

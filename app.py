@@ -12,6 +12,7 @@ class App:
 
         print('🚀 Inicializa rotas!')
         init_controllers(self.bottle)
+        
 
 
     def run(self):
@@ -26,4 +27,8 @@ class App:
 
 def create_app():
     return App()
+
+
+
+
 
