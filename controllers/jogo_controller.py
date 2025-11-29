@@ -14,13 +14,11 @@ class JogoController(BaseController):
         self.app.route('/jogos/edit/<jogo_id:int>', method=['GET','POST'], callback=self.edit_jogo)
         self.app.route('/jogos/delete/<jogo_id:int>', method='POST', callback=self.delete_jogo)
 
-    # GET /jogos
     def list_jogos(self):
         jogos = self.jogo_service.listar_jogos()
 
         return self.render('jogos', jogos=jogos)
 
-    # GET + POST /jogos/add
     def add_jogo(self):
         if request.method == 'GET':
             return self.render('jogo_form', jogo=None, action='/jogos/add')
@@ -32,7 +30,6 @@ class JogoController(BaseController):
             self.jogo_service.save(nome, preco, genero)
             self.redirect('/jogos')
 
-    # GET + POST /jogos/edit/<id>
     def edit_jogo(self, jogo_id):
         jogo = self.jogo_service.get_by_id(jogo_id)
 
@@ -46,7 +43,6 @@ class JogoController(BaseController):
             self.jogo_service.edit(jogo_id, nome, preco, genero)
             self.redirect('/jogos')
 
-    # POST /jogos/delete/<id>
     def delete_jogo(self, jogo_id):
         self.jogo_service.delete(jogo_id)
         self.redirect('/jogos')

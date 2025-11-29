@@ -6,49 +6,54 @@ class UserController(BaseController):
     def __init__(self, app):
         super().__init__(app)
 
+        self.auth_service = UserService()
         self.setup_routes()
-        self.user_service = UserService()
 
-
-    # Rotas User
+    # ROTAS
     def setup_routes(self):
-        self.app.route('/users', method='GET', callback=self.list_users)
-        self.app.route('/users/add', method=['GET', 'POST'], callback=self.add_user)
-        self.app.route('/users/edit/<user_id:int>', method=['GET', 'POST'], callback=self.edit_user)
-        self.app.route('/users/delete/<user_id:int>', method='POST', callback=self.delete_user)
+        self.app.route('/login',   method=['GET', 'POST'], callback=self.login)
+        self.app.route('/logout',  method='GET', callback=self.logout)
+        self.app.route('/register', method=['GET', 'POST'], callback=self.register)
 
-
-    def list_users(self):
-        users = self.user_service.get_all()
-        return self.render('users', users=users)
-
-
-    def add_user(self):
+    # LOGIN
+    def login(self):
         if request.method == 'GET':
-            return self.render('user_form', user=None, action="/users/add")
-        else:
-            # POST - salvar usuário
-            self.user_service.save()
-            self.redirect('/users')
+            return self.render('login', error=None)
 
+        # POST
+        username = request.forms.get('username')
+        password = request.forms.get('password')
 
-    def edit_user(self, user_id):
-        user = self.user_service.get_by_id(user_id)
+        user = self.auth_service.authenticate(username, password)
+
         if not user:
-            return "Usuário não encontrado"
+            return self.render('login', error="Usuário ou senha incorretos")
 
+        # cria sessão
+        self.auth_service.login(user)
+
+        return self.redirect('/')
+
+    # REGISTRO
+    def register(self):
         if request.method == 'GET':
-            return self.render('user_form', user=user, action=f"/users/edit/{user_id}")
-        else:
-            # POST - salvar edição
-            self.user_service.edit_user(user)
-            self.redirect('/users')
+            return self.render('register', error=None)
 
+        username = request.forms.get('username')
+        password = request.forms.get('password')
 
-    def delete_user(self, user_id):
-        self.user_service.delete_user(user_id)
-        self.redirect('/users')
+        # tenta registrar
+        result = self.auth_service.register(username, password)
 
+        if not result:
+            return self.render('register', error="Usuário já existe")
+
+        return self.redirect('/login')
+
+    # LOGOUT
+    def logout(self):
+        self.auth_service.logout()
+        return self.redirect('/login')
 
 user_routes = Bottle()
 UserController(user_routes)

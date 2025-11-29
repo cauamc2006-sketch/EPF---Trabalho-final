@@ -204,3 +204,10 @@ background: #2ecc71;
     font-size: 13px;
     opacity: 0.8;
 }
+.registro{
+  padding: 8px 18px;
+  color:white;
+  background: #34db34;
+  border-radius: 20px;
+  text-decoration: none;
+}
