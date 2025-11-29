@@ -5,10 +5,10 @@ from typing import List
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 class User:
-    def __init__(self, id: int, username: str, password: str, email: str = None):
+    def __init__(self, id: int, username: str, password: str, email: str ):
         self.id = id
         self.username = username
-        self.password = password   # depois dá pra substituir por hash
+        self.password = password   
         self.email = email
 
     def check_password(self, password: str) -> bool:
@@ -69,8 +69,12 @@ class UserModel:
     def get_by_id(self, user_id: int):
         return next((u for u in self.users if u.id == user_id), None)
 
-    def get_by_username(self, username: str):
-        return next((u for u in self.users if u.username == username), None)
+    def get_by_username(self, username):
+        for u in self.users:
+            if u.username == username:
+                return u
+        return None
+
 
     def add_user(self, user: User):
         self.users.append(user)
