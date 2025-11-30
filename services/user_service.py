@@ -15,6 +15,17 @@ class UserService:
     def get_by_username(self, username: str):
         return self.user_model.get_by_username(username)
 
+    def authenticate(self, username: str, password: str):
+        user = self.user_model.get_by_username(username)
+
+        if not user:
+            return None, "Usuário não encontrado!"
+
+        if user.password != password:
+            return None, "Senha incorreta!"
+
+        return user, None
+
     def register(self, username: str, password: str, email: str = None):
 
         if self.user_model.get_by_username(username):
@@ -33,22 +44,8 @@ class UserService:
 
         return user, None
 
-    def login(self, username: str, password: str):
-
-        user = self.user_model.get_by_username(username)
-
-        if not user:
-            return None, "Usuário não encontrado!"
-
-        if not user.check_password(password):
-            return None, "Senha incorreta!"
-
-        return user, None
-
     def update(self, user: User):
         self.user_model.update_user(user)
 
     def delete(self, user_id: int):
         self.user_model.delete_user(user_id)
-
-
