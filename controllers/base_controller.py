@@ -1,4 +1,6 @@
 from bottle import static_file
+from models.jogo import JogoModel
+
 
 class BaseController:
     def __init__(self, app):
@@ -16,8 +18,9 @@ class BaseController:
 
 
     def home_redirect(self):
-        """Redireciona a rota raiz para /users"""
-        return self.render('home', title='Home')
+        model = JogoModel()
+        jogos = model.get_all()
+        return self.render('home', title='Home', jogos=jogos)
 
 
     def helper(self):

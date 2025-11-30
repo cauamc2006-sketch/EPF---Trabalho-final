@@ -13,60 +13,18 @@
             <p>OFERTAS RECOMENDADAS:</p>
         </div>
             <!--JOGOS-->
-        <div class="jogos-grid">    
-        
-            <div class="jogo">
-        <a href="/views/resident.tpl">  
+       <div class="jogos-grid">
 
-                <img src="/static/img/Resident-Evil-revelations-2-150x150.webp" alt="j3"loading="lazy">
-
-                <div class="margem-jogos">
-                    
-                        <h3 class="titulo-jogo">Resident Evil</h3>
-                        <p class="categoria">Terror</p>
-                        <p class="preço">R$199,90</p>
-                    
-
-        </a>    </div>    
+% for jogo in jogos:
+    <div class="jogo">
+        <a href="/jogo/{{ jogo.get_id() }}">
+            <img src="{{ jogo.get_imagem() }}" alt="{{ jogo.get_nome() }}">
+            <div class="margem-jogos">
+                <h3>{{ jogo.get_nome() }}</h3>
+                <p class="categoria">{{ jogo.get_genero() }}</p>
+                <p class="preço">R$ {{ "%.2f" % jogo.get_preco() }}</p>
             </div>
-        
-
-            <div class="jogo">
-                <img src="/static/img/lnmaress.webp" alt="/j4"loading="lazy">
-                
-                <div class="margem-jogos">
-
-                        <h3 class="titulo-jogo">Little Night Mares</h3>
-                        <p class="categoria">Puzzle</p>
-                        <p class="preço">R$149,99</p>
-                </div>
-            </div> 
-
-
-
-            <div class="jogo">
-                <img src="/static/img/reddeadd.webp" alt="j4"loading="lazy">
-                
-                <div class="margem-jogos">
-
-                        <h3 class="titulo-jogo">Read Dead</h3>
-                        <p class="categoria">Mundo Aberto</p>
-                        <p class="preço">R$99,90</p>
-                </div>
-            </div> 
-
-            
-            <div class="jogo">
-                <img src="/static/img/download.webp" alt="j4"loading="lazy">
-                
-                <div class="margem-jogos">
-
-                        <h3 class="titulo-jogo">Battlefield 6 </h3>
-                        <p class="categoria">Tiro</p>
-                        <p class="preço">R$350,00</p>
-                </div>
-            </div> 
-
-        </div>
-
+        </a>
     </div>
+% end
+</div>

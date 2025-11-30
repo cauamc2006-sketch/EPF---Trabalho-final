@@ -4,27 +4,27 @@
     "nome": "Resident Evil",
     "imagem": "/static/img/Resident.webp",
     "preco": 199.90,
-    "genero": "Terror"
+    "descricao": "Terror"
   },
   {
     "id": 2,
     "nome": "Little Night Mares",
     "imagem": "/static/img/lnmaress.webp",
     "preco": 99.90,
-    "genero": "Puzzle."
+    "descricao": "Puzzle."
   },
   {
     "id": 3,
     "nome": "Red Dead",
     "imagem": "/static/img/reddeadd.webp",
     "preco": 99.90,
-    "genero": "Mundo aberto."
+    "descricao": "Mundo aberto."
   },
    {
     "id": 4,
     "nome": "Naruto Storm 4",
     "imagem": "/static/img/narutoo.webp",
     "preco": 99.90,
-    "genero": "Luta."
+    "descricao": "Luta."
   } 
 ]
