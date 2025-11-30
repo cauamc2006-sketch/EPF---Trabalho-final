@@ -3,14 +3,22 @@
 
 <div class="pagina-jogo">
 
-    <img src="{{ jogo.get_imagem() }}" class="img-jogo">
+    <div class="jogo-container">
 
-    <h1>{{ jogo.get_nome() }}</h1>
+        <img src="{{ jogo.get_imagem() }}" class="img-jogo">
 
-    <p>Gênero: {{ jogo.get_genero() }}</p>
+        <div class="info-jogo">
+            <h1>{{ jogo.get_nome() }}</h1>
 
-    <p>Preço: R$ {{ "%.2f" % jogo.get_preco() }}</p>
+            <p class="genero">Gênero: <span>{{ jogo.get_genero() }}</span></p>
 
-    <a href="/jogos">Voltar</a>
+            <p class="preco">
+                R$ {{ "%.2f" % jogo.get_preco() }}
+            </p>
+
+            <a href="/jogos" class="btn-voltar">Voltar</a>
+        </div>
+
+    </div>
 
 </div>

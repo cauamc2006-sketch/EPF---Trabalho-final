@@ -16,7 +16,6 @@ class BaseController:
         # Rota para arquivos estáticos (CSS, JS, imagens)
         self.app.route('/static/<filename:path>', callback=self.serve_static)
 
-
     def home_redirect(self):
         model = JogoModel()
         jogos = model.get_all()
