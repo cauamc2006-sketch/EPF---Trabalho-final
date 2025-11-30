@@ -1,4 +1,4 @@
-from Jogo import Jogo
+from jogo import Jogo
 
 class Carrinho:
     

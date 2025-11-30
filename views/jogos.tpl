@@ -2,6 +2,6 @@
 
 <ul>
 % for jogo in jogos:
-    <li>{{ jogo.nome }} - R$ {{ jogo.preco }}</li>
+    <li>{{ jogo.get_nome() }} - R$ {{ jogo.get_preco() }}</li>
 % end
 </ul>

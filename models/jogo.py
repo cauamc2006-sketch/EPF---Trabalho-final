@@ -9,7 +9,7 @@ class Jogo:
         self.__id = id
         self.__nome = nome
         self.__preco = preco
-        self.__genero = genero
+        self.__categoria = genero
         self.__imagem = imagem  # opcional
 
     def get_id(self):
@@ -22,7 +22,7 @@ class Jogo:
         return self.__preco
 
     def get_genero(self):
-        return self.__genero
+        return self.__categoria
 
     def get_imagem(self):
         return self.__imagem
@@ -32,7 +32,7 @@ class Jogo:
             "id": self.__id,
             "nome": self.__nome,
             "preco": self.__preco,
-            "genero": self.__genero,
+            "genero": self.__categoria,
             "imagem": self.__imagem
         }
 
@@ -55,7 +55,10 @@ class JogoModel:
             json.dump([j.to_dict() for j in self.jogos], f, indent=4, ensure_ascii=False)
 
     def get_all(self):
-        return self.jogos
+        with open("data/jogos.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        return [Jogo(**j) for j in data]
 
     def get_by_id(self, jogo_id):
         return next((j for j in self.jogos if j.get_id() == jogo_id), None)

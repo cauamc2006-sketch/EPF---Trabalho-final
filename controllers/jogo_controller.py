@@ -16,6 +16,8 @@ class JogoController(BaseController):
         self.app.route('/jogos/edit/<jogo_id:int>', method=['GET', 'POST'], callback=self.edit_jogo)
         self.app.route('/jogos/delete/<jogo_id:int>', method='POST', callback=self.delete_jogo)
         self.app.route('/jogo/<jogo_id:int>', 'GET', self.jogo_detalhe)
+        self.app.route('/categorias', method='GET', callback=self.listar_categorias)
+        self.app.route('/categorias/<categoria>', method='GET', callback=self.jogos_por_categoria)
 
     @staticmethod
     def carregar_jogos():
@@ -64,6 +66,14 @@ class JogoController(BaseController):
     def delete_jogo(self, jogo_id):
         self.jogo_service.remover_jogo(jogo_id)
         return self.redirect('/jogos')
+    
+    def listar_categorias(self):
+        categorias = self.jogo_service.get_categorias()
+        return self.render('categorias', categorias=categorias)
+
+    def jogos_por_categoria(self, categoria):
+        jogos = self.jogo_service.get_by_categoria(categoria)
+        return self.render('jogos', jogos=jogos, categoria=categoria)
 
 jogo_routes = Bottle()
 JogoController(jogo_routes)
