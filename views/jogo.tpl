@@ -15,6 +15,7 @@
             <p class="preco">
                 R$ {{ "%.2f" % jogo.get_preco() }}
             </p>
+            <a class="btn-add" href="/carrinho/add/{{ jogo.get_id() }}">Adicionar ao carrinho</a>
 
             <a href="/jogos" class="btn-voltar">Voltar</a>
         </div>

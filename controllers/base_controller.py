@@ -1,5 +1,6 @@
 from bottle import static_file
 from models.jogo import JogoModel
+from bottle import redirect as bottle_redirect
 
 
 class BaseController:
@@ -38,8 +39,8 @@ class BaseController:
 
 
     def redirect(self, path, code=302):
-        """Redirecionamento robusto com tratamento de erros"""
-        from bottle import HTTPResponse, response as bottle_response
+        """Redireciona usando o redirect nativo do Bottle, preservando cookies"""
+        return bottle_redirect(path, code=code)
 
         try:
             bottle_response.status = code
