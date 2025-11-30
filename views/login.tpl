@@ -1,11 +1,12 @@
+% rebase('layout.tpl')
 % title = "login"
 
-
+<div class="login-box">
 
 <h2>Login</h2>
 
 % if error:
-    <div class="alert alert-danger">{{error}}</div>
+    <div class="alert-danger">{{error}}</div>
 % end
 
 <form method="POST" action="/login" class="form">
@@ -19,3 +20,5 @@
 </form>
 
 <p>Não tem conta? <a href="/register">Cadastrar</a></p>
+
+</div>

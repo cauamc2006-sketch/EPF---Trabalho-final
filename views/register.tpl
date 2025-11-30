@@ -1,12 +1,16 @@
+% rebase('layout.tpl')
+% title = "Registrar"
 
+<div class="register-box">
 
 <h2>Cadastro</h2>
 
 % if error:
-    <div class="alert alert-danger">{{error}}</div>
+    <div class="alert-danger">{{error}}</div>
 % end
 
 <form method="POST" action="/register" class="form">
+
     <label for="username">Usuário:</label>
     <input type="text" name="username" required>
 
@@ -20,3 +24,5 @@
 </form>
 
 <p>Já tem conta? <a href="/login">Entrar</a></p>
+
+</div>
