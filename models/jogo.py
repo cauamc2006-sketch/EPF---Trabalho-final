@@ -10,7 +10,7 @@ class Jogo:
         self.__nome = nome
         self.__preco = preco
         self.__categoria = genero
-        self.__imagem = imagem  # opcional
+        self.__imagem = imagem  
 
     def get_id(self):
         return self.__id

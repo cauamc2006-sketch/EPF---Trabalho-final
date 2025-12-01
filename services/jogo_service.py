@@ -27,12 +27,11 @@ class JogoService:
         return categorias
 
     def get_by_categoria(self, categoria):
-        jogos = self.model.get_all()
         cat_lower = (categoria or "").lower()
         return [
-        j for j in jogos
-        if getattr(j, "categoria", None) and isinstance(j.get_genero(), str)
-           and j.get_genero().lower() == cat_lower
+            j for j in self.model.get_all()
+            if j.get_genero() and j.get_genero().lower() == cat_lower
     ]
+
 
 

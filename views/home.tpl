@@ -10,7 +10,7 @@
     <div class="container">
         <div class="tit-principal">
        
-            <p>OFERTAS RECOMENDADAS:</p>
+            <p><center>OFERTAS RECOMENDADAS:</center></p>
         </div>
             <!--JOGOS-->
        <div class="jogos-grid">

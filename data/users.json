@@ -40,5 +40,11 @@
         "username": "italo santana",
         "password": "123",
         "email": "2334345@hotmail.com"
+    },
+    {
+        "id": 8,
+        "username": "Jose Carlos",
+        "password": "jose",
+        "email": "josecarlos@gmail.com"
     }
 ]

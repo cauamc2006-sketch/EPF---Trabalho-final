@@ -1,30 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Categorias</title>
-    <style>
-        body { font-family: Arial; }
-        ul { list-style: none; padding: 0; }
-        li { 
-            background: #f2f2f2;
-            margin: 4px 0;
-            padding: 10px;
-            border-radius: 6px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Lista de Categorias</h1>
+% rebase('layout.tpl')
 
-   % for cat in categorias:
-    <li>
-        <a href="/categorias/{{cat}}">{{cat}}</a>
-    </li>
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Categorias</h2>
+
+    % if categorias:
+        <div class="row g-3">
+            % for cat in categorias:
+                <div class="col-12 col-md-4">
+                    <a href="/categorias/{{cat}}" style="text-decoration:none;">
+                        <div class="card shadow-sm p-3 text-center">
+                            <h5 class="text-primary">{{cat}}</h5>
+                        </div>
+                    </a>
+                </div>
+            % end
+        </div>
+    % else:
+        <div class="alert alert-warning text-center">
+            Nenhuma categoria encontrada.
+        </div>
     % end
+</div>
 
-
-    <br>
-    <a href="/">Voltar</a>
-</body>
-</html>

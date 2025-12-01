@@ -5,10 +5,10 @@
 <div class="jogos-lista">
 % for jogo in jogos:
     <div class="jogo-card">
-        <a href="/games/{{jogo['id']}}">
-            <img src="{{jogo['imagem']}}" alt="{{jogo['nome']}}">
-            <h3>{{jogo['nome']}}</h3>
-            <p>R$ {{jogo['preco']}}</p>
+        <a href="/games/{{jogo['get_id()']}}">
+            <img src="{{jogo['get_imagem()']}}" alt="{{jogo['get_nome()']}}">
+            <h3>{{jogo['get_nome()']}}</h3>
+            <p>R$ {{jogo['get_preco()']}}</p>
         </a>
     </div>
 % end
