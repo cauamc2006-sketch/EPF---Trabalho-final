@@ -17,17 +17,12 @@
 <body>
     <h1>Lista de Categorias</h1>
 
-    % if categorias:
-        <ul>
-            % for cat in categorias:
-                <li>
-                    <strong>{{cat.nome}}</strong>
-                </li>
-            % end
-        </ul>
-    % else:
-        <p>Nenhuma categoria cadastrada.</p>
+   % for cat in categorias:
+    <li>
+        <a href="/categorias/{{cat}}">{{cat}}</a>
+    </li>
     % end
+
 
     <br>
     <a href="/">Voltar</a>

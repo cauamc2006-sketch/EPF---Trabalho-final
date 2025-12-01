@@ -1,4 +1,4 @@
-from jogo import Jogo
+from models.jogo import Jogo
 import json
 import os
 
