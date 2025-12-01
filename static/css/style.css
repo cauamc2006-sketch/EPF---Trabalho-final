@@ -374,5 +374,27 @@ a:hover {
     text-align: center;
     font-weight: bold;
 }
+.finalizar-compra-box {
+    background:rgb(31,39,47);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: white;
+}
+
+.btn-finalizar {
+    background: #2ecc71;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #27ae60;
+}
 
 
