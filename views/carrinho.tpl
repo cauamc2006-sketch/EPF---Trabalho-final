@@ -1,6 +1,11 @@
 % rebase('layout.tpl')
 % title = "Seu Carrinho"
 
+% if 'total' not in locals():
+    % total = 0
+% end
+
+
 <h1>Seu Carrinho</h1>
 
 % if not jogos:
@@ -16,4 +21,16 @@
     % end
 
     <a href="/carrinho/clear">Esvaziar carrinho</a>
+
+    <hr>
+
+    <div class="finalizar-compra-box">
+        <h3>Finalizar Compra</h3>
+        <p>Total: R$ {{ total }}</p>
+
+        <form action="/carrinho/finalizar" method="POST">
+            <button type="submit" class="btn-finalizar">Finalizar Pedido</button>
+        </form>
+    </div>
+
 % end
