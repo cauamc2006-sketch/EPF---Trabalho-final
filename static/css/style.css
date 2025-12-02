@@ -26,6 +26,7 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
+/* Layout */
 .container {
   max-width: 900px;
 
@@ -104,12 +105,15 @@ body {
   height: 100px;
   width: auto;
 }
-.btn-login {
+.btn-login{
   padding: 8px 18px;
   color:white;
   background: #34db34;
   border-radius: 20px;
   text-decoration: #34db34;
+}
+.btn-login a:hover{
+  background: #2980b9;
 }
 .carrinho-aba{
   padding: 8px 18px;
@@ -188,13 +192,13 @@ background: #2ecc71;
   color: white;
 }
 .preço {
-  font-size: 16px;
-  font-weight: bold;
-  color: #34db34;
+    font-size: 16px;
+    font-weight: bold;
+    color: #34db34;
 }
 .titulo-jogo {
-  margin: 0;
-  font-size: 18px;
+    margin: 0;
+    font-size: 18px;
 }
 .categoria {
     font-size: 13px;
@@ -207,6 +211,9 @@ background: #2ecc71;
   border-radius: 20px;
   text-decoration: none;
 }
+/* ============================
+   PÁGINA INDIVIDUAL DO JOGO
+   ============================ */
 
 .pagina-jogo {
     width: 100%;
@@ -276,6 +283,7 @@ background: #2ecc71;
     background: #2ecc71;
 }
 
+/* Responsividade */
 @media(max-width: 768px) {
     .jogo-container {
         flex-direction: column;
@@ -402,8 +410,8 @@ a:hover {
 
 .explorar-lista {
     display: flex;
-    flex-direction: column;      
-    gap: 25px;                   
+    flex-direction: column;      /* <- LISTA VERTICAL */
+    gap: 25px;                   /* Espaçamento entre cards */
 }
 
 .jogo-card {
@@ -440,4 +448,3 @@ a:hover {
     font-weight: bold;
     margin-top: 10px;
 }
-

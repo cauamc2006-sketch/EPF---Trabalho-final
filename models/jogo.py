@@ -60,6 +60,11 @@ class JogoModel:
 
         return [Jogo(**j) for j in data]
 
+    def get_categorias(self):
+        """Retorna uma lista única de categorias (gêneros) dos jogos"""
+        jogos = self.get_all()
+        return sorted(list(set([jogo.get_genero() for jogo in jogos])))
+
     def get_by_id(self, jogo_id):
         return next((j for j in self.jogos if j.get_id() == jogo_id), None)
 
