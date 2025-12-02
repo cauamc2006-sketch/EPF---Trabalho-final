@@ -52,5 +52,11 @@
         "username": "teste5",
         "password": "teste5",
         "email": "teste5@gmail.com"
+    },
+    {
+        "id": 10,
+        "username": "teste 45",
+        "password": "teste",
+        "email": "teste45@testando.com"
     }
 ]

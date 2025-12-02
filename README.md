@@ -6,8 +6,8 @@ Uma loja virtual simples de jogos construída em Python usando o micro-framework
 
 # Criadores
 
--Ítalo Carlos Santana Dias do Nascimento- 242015639
--Cauã Mendes Coelho- 242032237
+- Ítalo Carlos Santana Dias do Nascimento- 242015639
+- Cauã Mendes Coelho- 242032237
 
 ## ✅ Funcionalidades
 
