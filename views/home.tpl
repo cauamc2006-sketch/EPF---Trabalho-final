@@ -4,7 +4,7 @@
     <div class="hero">
         
         <h1>jogos épicos aqui</h1>
-        <a class="bnt-hero" href="/jogos">EXPLORAR JOGOS</a> <!-- /games ainda nao foi feito-->
+        <a class="bnt-hero" href="/jogos">EXPLORAR JOGOS</a> 
     </div>
 
     <div class="container">

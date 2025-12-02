@@ -1,8 +1,22 @@
 # Projeto Template: POO com Python + Bottle + JSON
 
-Este é um projeto de template educacional voltado para o ensino de **Programação Orientada a Objetos (POO)** do Prof. Lucas Boaventura, Universidade de Brasília (UnB).
+# Lojinha de Jogos
 
-Utiliza o microframework **Bottle**. Ideal para uso em disciplinas introdutórias de Engenharia de Software ou Ciência da Computação.
+Uma loja virtual simples de jogos construída em Python usando o micro-framework Bottle, com persistência via JSON — projeto para disciplina da universidade, com o prof. Lucas Boaventura.
+
+# Criadores
+
+-Ítalo Carlos Santana Dias do Nascimento- 242015639
+-Cauã Mendes Coelho- 242032237
+
+## ✅ Funcionalidades
+
+- Cadastro de usuários e login.  
+- Listagem de jogos (a partir de `data/jogos.json`). 
+- Adicionar jogos novos (a partir de `data/jogos.json`).
+- Carrinho de compras: adicionar e remover jogos.  
+- Visualização de carrinho com total atualizado.  
+- Finalização de compra.  
 
 ## 💡 Objetivo
 
@@ -40,28 +54,32 @@ Contém as classes responsáveis por lidar com as rotas da aplicação. Exemplos
 
 ### `models/`
 Define as classes que representam os dados da aplicação. Exemplo:
-- `user.py`: classe `User`, com atributos como `id`, `name`, `email`, etc.
+- `user.py`: classe `User`, com atributos como `id`, `username`, `email`, `password` etc.
+- `jogo.py`: classe `jogo`, com atributos como `id`, `nome`, `preco`, `imagem` etc.
+- `Carrinho.py`: classe `Carrinho`, ação que manipula o objeto jogo.
 
 ### `services/`
 Responsável por salvar, carregar e manipular dados usando arquivos JSON. Exemplo:
-- `user_service.py`: contém métodos como `get_all`, `add_user`, `delete_user`.
+- `user_service.py`: contém métodos como `get_all`, `register`, `delete`.
+- `jogo_service.py`: contém metodos como `listar_jogos`, `get_by_id` etc.
+- `carrinho_service.py`: contém metodos como `finalizar_compra`,  etc.
 
 ### `views/`
 Contém os arquivos `.tpl` utilizados pelo Bottle como páginas HTML:
 - `layout.tpl`: estrutura base com navegação e bloco `content`.
-- `users.tpl`: lista os usuários.
-- `user_form.tpl`: formulário para adicionar/editar usuário.
+- `home.tpl`: pagina principal.
+- `carrinho`: formulário para adicionar/remover jogos.
 
 ### `static/`
 Arquivos estáticos como:
-- `css/style.css`: estilos básicos.
-- `js/main.js`: scripts JS opcionais.
-- `img/BottleLogo.png`: exemplo de imagem.
+- `css/style.css`: estilos básicos.-
+- `img/`: imagens dos jogos.
 
 ### `data/`
 Armazena os arquivos `.json` que simulam o banco de dados:
-- `users.json`: onde os dados dos usuários são persistidos.
-
+- `carrinhos.json`: onde os dados da compra são persistidos.
+- `jogos.json`: onde os jogos sao cadastrados e/ou removidos.
+- `users.json`: onde os usuarios sao cadastrados e acessados.
 ---
 
 ## ▶️ Como Executar
@@ -80,7 +98,7 @@ pip install -r requirements.txt
 
 3. Rode a aplicação:
 ```bash
-python main.py
+python main.py # em caso de erro, tente com "py" ou "python"
 ```
 
 4. Accese sua aplicação no navegador em: [http://localhost:8080](http://localhost:8080)
@@ -88,18 +106,9 @@ python main.py
 ---
 
 ## ✍️ Personalização
-Para adicionar novos modelos (ex: Atividades):
-
-1. Crie a classe no diretório **models/**.
-
-2. Crie o service correspondente para manipulação do JSON.
-
-3. Crie o controller com as rotas.
-
-4. Crie as views .tpl associadas.
+Adicione jogos novos em data/jogos.json seguindo o padrão de atributos dos outros jogos criados!!
 
 ---
 
 ## 🧠 Autor e Licença
 Projeto desenvolvido como template didático para disciplinas de Programação Orientada a Objetos, baseado no [BMVC](https://github.com/hgmachine/bmvc_start_from_this).
-Você pode reutilizar, modificar e compartilhar livremente.

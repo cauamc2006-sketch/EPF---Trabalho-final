@@ -26,7 +26,6 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-/* Layout */
 .container {
   max-width: 900px;
 
@@ -211,9 +210,6 @@ background: #2ecc71;
   border-radius: 20px;
   text-decoration: none;
 }
-/* ============================
-   PÁGINA INDIVIDUAL DO JOGO
-   ============================ */
 
 .pagina-jogo {
     width: 100%;
@@ -283,7 +279,6 @@ background: #2ecc71;
     background: #2ecc71;
 }
 
-/* Responsividade */
 @media(max-width: 768px) {
     .jogo-container {
         flex-direction: column;
@@ -410,8 +405,8 @@ a:hover {
 
 .explorar-lista {
     display: flex;
-    flex-direction: column;      /* <- LISTA VERTICAL */
-    gap: 25px;                   /* Espaçamento entre cards */
+    flex-direction: column;      
+    gap: 25px;                   
 }
 
 .jogo-card {

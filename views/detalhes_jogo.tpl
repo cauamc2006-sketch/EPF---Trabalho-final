@@ -12,7 +12,7 @@
         
         <div class="descricao">
             <h2>Sobre o Jogo:</h2>
-            <p>Aqui vai uma descrição mais longa, que você pode adicionar ao seu JSON futuramente.</p>
+            <p>...</p>
         </div>
 
         <div class="preco-compra">
