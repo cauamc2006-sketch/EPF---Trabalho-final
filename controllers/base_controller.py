@@ -1,4 +1,4 @@
-from bottle import static_file
+from bottle import static_file, request
 from models.jogo import JogoModel
 from bottle import redirect as bottle_redirect
 
@@ -19,9 +19,36 @@ class BaseController:
 
     def home_redirect(self):
         model = JogoModel()
-        jogos = model.get_all()
-        return self.render('home', title='Home', jogos=jogos)
+        todos_jogos = model.get_all()
+        termo_busca = request.query.get('termo', '').strip().lower()
+        
+        jogos_filtrados = []
+        
+        jogos_para_exibir = todos_jogos 
 
+        if termo_busca:
+            for jogo in todos_jogos:
+                try:
+                    nome_jogo = jogo.get_nome().lower()
+                    genero_jogo = jogo.get_genero().lower()
+                except AttributeError:
+                    continue
+
+                if termo_busca in nome_jogo or termo_busca in genero_jogo:
+                    jogos_filtrados.append(jogo)
+
+            if len(jogos_filtrados) == 1:
+                jogo_unico = jogos_filtrados[0]
+                return self.redirect(f"/jogo/{jogo_unico.get_id()}")
+                
+            elif len(jogos_filtrados) > 0:
+                jogos_para_exibir = jogos_filtrados
+                
+            else:
+                jogos_para_exibir = todos_jogos
+                print(f"Busca por '{termo_busca}' nao encontrou resultados.")
+                
+        return self.render('home', title='Home', jogos=jogos_para_exibir)
 
     def helper(self):
         return self.render('helper-final')

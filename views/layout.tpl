@@ -25,7 +25,18 @@
         <a href="/login" class="btn-login">LOGIN</a>
         <a href="/register" class = "registro">REGISTRAR</a>
         
-        <input type="text" class="barra-pesquisa" placeholder="🔍PESQUISAR...">
+            <form action="/" method="GET" class="search-form">
+                <input 
+                    type="text" 
+                    name="termo" 
+                    class="barra-pesquisa" 
+                    placeholder="🔍PESQUISAR..."
+                    
+                    % # Isto é opcional, mas ajuda a depurar:
+                    value="{{ request.query.termo or '' if 'request' in globals() else '' }}"
+                >
+                <button type="submit" style="display: none;"></button> 
+            </form>
     </div>
 </header>
  <div class="container">

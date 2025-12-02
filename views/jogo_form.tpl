@@ -1,1 +1,0 @@
-<h1>Pagina de formulario do jogo</h1>

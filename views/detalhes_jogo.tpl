@@ -1,4 +1,3 @@
-% rebase('layout.tpl')
 % title = jogo.nome
 
 <div class="detalhes-container">

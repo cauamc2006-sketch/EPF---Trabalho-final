@@ -12,11 +12,9 @@ class User:
         self.email = email
 
     def check_password(self, password: str) -> bool:
-        """Verifica se a senha está correta"""
         return self.password == password
 
     def update(self, username=None, password=None, email=None):
-        """Atualiza os atributos do usuário"""
         if username:
             self.username = username
         if password:
@@ -25,7 +23,6 @@ class User:
             self.email = email
 
     def to_dict(self):
-        """Retorna o usuário no formato serializável"""
         return {
             "id": self.id,
             "username": self.username,
@@ -35,7 +32,6 @@ class User:
 
     @staticmethod
     def from_dict(data: dict):
-        """Cria usuário a partir de um dicionário"""
         return User(
             id=data["id"],
             username=data["username"],

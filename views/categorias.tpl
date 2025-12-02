@@ -1,24 +1,24 @@
 % rebase('layout.tpl')
-% title = "Categorias"
 
-<div class="categorias-container">
-    <h2>{{ title }}</h2>
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Categorias</h2>
 
-    <ul class="categorias-list">
-    % # 1. Garante que é um dicionário e itera sobre chave/valor
-    % if isinstance(categorias, dict):
-        % for categoria_nome, jogo in categorias.items():
-            <li class="categoria-item">
-                <a href="/jogos?genero={{ categoria_nome }}">
-                    
-                    <img src="{{ jogo.get_imagem() }}" alt="Jogo da Categoria {{ categoria_nome }}" class="categoria-image">
-                    
-                    <span class="categoria-title">{{ categoria_nome }}</span>
-                </a>
-            </li>
-        % end
+    % if categorias:
+        <div class="row g-3">
+            % for cat in categorias:
+                <div class="col-12 col-md-4">
+                    <a href="/categorias/{{cat}}" style="text-decoration:none;">
+                        <div class="card shadow-sm p-3 text-center">
+                            <h5 class="text-primary">{{cat}}</h5>
+                        </div>
+                    </a>
+                </div>
+            % end
+        </div>
     % else:
-        <li>Erro: O formato das categorias está incorreto.</li>
+        <div class="alert alert-warning text-center">
+            Nenhuma categoria encontrada.
+        </div>
     % end
-    </ul>
 </div>
+

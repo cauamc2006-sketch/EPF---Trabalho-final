@@ -397,4 +397,8 @@ a:hover {
     background: #27ae60;
 }
 
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
 
