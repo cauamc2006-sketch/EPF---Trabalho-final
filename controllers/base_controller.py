@@ -13,6 +13,9 @@ class BaseController:
         """Configura rotas básicas comuns a todos os controllers"""
         self.app.route('/', method='GET', callback=self.home_redirect)
         self.app.route('/helper', method=['GET'], callback=self.helper)
+        self.app.route('/carrinho', method='GET', callback=lambda: self.render('carrinho'))
+        self.app.route('/categorias', method='GET', callback=lambda: self.render('categorias'))
+
 
         # Rota para arquivos estáticos (CSS, JS, imagens)
         self.app.route('/static/<filename:path>', callback=self.serve_static)

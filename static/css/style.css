@@ -104,15 +104,12 @@ body {
   height: 100px;
   width: auto;
 }
-.btn-login{
+.btn-login {
   padding: 8px 18px;
   color:white;
   background: #34db34;
   border-radius: 20px;
   text-decoration: #34db34;
-}
-.btn-login a:hover{
-  background: #2980b9;
 }
 .carrinho-aba{
   padding: 8px 18px;
@@ -191,13 +188,13 @@ background: #2ecc71;
   color: white;
 }
 .preço {
-    font-size: 16px;
-    font-weight: bold;
-    color: #34db34;
+  font-size: 16px;
+  font-weight: bold;
+  color: #34db34;
 }
 .titulo-jogo {
-    margin: 0;
-    font-size: 18px;
+  margin: 0;
+  font-size: 18px;
 }
 .categoria {
     font-size: 13px;
