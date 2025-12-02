@@ -26,7 +26,7 @@
 
     <div class="finalizar-compra-box">
         <h3>Finalizar Compra</h3>
-        <p>Total: R$ {{ total }}</p>
+        <p>Total: R$ {{ "%.2f" % total }}</p>
 
         <form action="/carrinho/finalizar" method="POST">
             <button type="submit" class="btn-finalizar">Finalizar Pedido</button>

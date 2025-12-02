@@ -42,11 +42,11 @@
             color: #ccc;
         }
 
-    .jogo-card .preco {
-    color: #00ff5a;
-    font-weight: bold;
-    margin-top: 10px;
-}
+        .jogo-card .preco {
+            color: #00ff5a;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 

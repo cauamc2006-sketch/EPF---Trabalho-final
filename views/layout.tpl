@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <style>
+        
+    .logo{
+        height: 75px;
+         width: 90px;
+}
+    </style>
 
 <header class="header">
     <div class="header-cn">
-                <img src="/static/img/ICON_SITE-def.png"alt="Logo"class=logo>
+                <img src="/static/img/ChatGPT Image 2 de dez. de 2025, 14_01_50 (1).png"alt="Logo"class=logo>
  
                 <nav class="nav-menu">
                     <a href="/">INÍCIO</a>
@@ -25,7 +32,18 @@
         <a href="/login" class="btn-login">LOGIN</a>
         <a href="/register" class = "registro">REGISTRAR</a>
         
-        <input type="text" class="barra-pesquisa" placeholder="🔍PESQUISAR...">
+            <form action="/" method="GET" class="search-form">
+                <input 
+                    type="text" 
+                    name="termo" 
+                    class="barra-pesquisa" 
+                    placeholder="🔍PESQUISAR..."
+                    
+                    % # Isto é opcional, mas ajuda a depurar:
+                    value="{{ request.query.termo or '' if 'request' in globals() else '' }}"
+                >
+                <button type="submit" style="display: none;"></button> 
+            </form>
     </div>
 </header>
  <div class="container">
