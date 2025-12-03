@@ -44,6 +44,19 @@ class UserService:
 
         return user, None
 
+    from models.user import UserModel
+
+    def is_admin(self, user_id: int):
+        """Verifica se o usuário com o ID fornecido tem permissão de administrador."""
+        try:
+            user = self.user_model.get_by_id(int(user_id)) 
+        except (TypeError, ValueError):
+            return False
+
+        if user and user.is_admin:
+            return True
+        return False
+
     def update(self, user: User):
         self.user_model.update_user(user)
 

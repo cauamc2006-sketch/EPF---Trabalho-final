@@ -443,7 +443,7 @@ a:hover {
 }
 
 .jogo-card .preco {
-    color: #00ff5a;
+    color: #34db34;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -461,4 +461,13 @@ a:hover {
 
 .btn-logout:hover {
     cursor: pointer;
+}
+.alert-danger {
+    color: red; 
+    background-color: #ffe0e0; 
+    padding: 10px;
+    border: 1px solid red; 
+    border-radius: 4px; 
+    margin-bottom: 15px;
+    width: auto;
 }

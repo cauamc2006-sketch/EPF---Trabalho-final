@@ -58,15 +58,12 @@ class UserController(BaseController):
 
         return self.redirect('/login')
 
-    # Seu arquivo UserController (dentro da classe UserController)
 
     def logout(self):
         from bottle import response
 
-        # A chave "user_id" é o nome do cookie (não muda)
         response.delete_cookie("user_id", path="/") 
         
-        # Redireciona para a página de login
         return self.redirect('/login')
 
 user_routes = Bottle()

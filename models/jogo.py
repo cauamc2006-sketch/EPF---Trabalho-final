@@ -66,11 +66,17 @@ class JogoModel:
         return sorted(list(set([jogo.get_genero() for jogo in jogos])))
 
     def get_by_id(self, jogo_id):
+        try:
+            jogo_id = int(jogo_id)
+        except ValueError:
+            return None 
+            
         return next((j for j in self.jogos if j.get_id() == jogo_id), None)
 
     def add_jogo(self, jogo):
         self.jogos.append(jogo)
         self._save()
+        self.jogos = self._load()
 
     def delete_jogo(self, jogo_id):
         self.jogos = [j for j in self.jogos if j.get_id() != jogo_id]

@@ -1,49 +1,44 @@
 [
-  {
-    "id": 1,
-    "nome": "Resident Evil",
-    "imagem": "/static/img/residentimgavif.avif",
-    "preco": 199.90,
-    "genero": "Terror"
-  },
-  {
-    "id": 2,
-    "nome": "Little Night Mares",
-    "imagem": "/static/img/littlenightimg.jpg",
-    "preco": 59.90,
-    "genero": "Puzzle"
-  },
-  {
-    "id": 3,
-    "nome": "Red Dead ",
-    "imagem": "/static/img/Red_Dead_Redemption_2.png",
-    "preco": 99.99,
-    "genero": "Mundo aberto"
-  },
-   {
-    "id": 4,
-    "nome": "Naruto Storm 4",
-    "imagem": "/static/img/naruto.webp",
-    "preco": 79.90,
-    "genero": "Luta"
-  },
-
-  {
-    "id": 5,
-    "nome": "FIFA 26",
-    "preco": 299,
-    "genero": "Esportes",
-    "imagem": "/static/img/fifaimg.avif"
-  },
-
-  {
-  "id": 6,
-  "nome": "Call of Duty: MW3",
-  "imagem": "/static/img/MWIII_Capa.png",
-  "preco": 249.90,
-  "genero": "Tiro"
-}
-
-
-  
+    {
+        "id": 1,
+        "nome": "Resident Evil",
+        "preco": 199.9,
+        "genero": "Terror",
+        "imagem": "/static/img/residentimgavif.avif"
+    },
+    {
+        "id": 2,
+        "nome": "Little Night Mares",
+        "preco": 59.9,
+        "genero": "Puzzle",
+        "imagem": "/static/img/littlenightimg.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Red Dead ",
+        "preco": 99.99,
+        "genero": "Mundo aberto",
+        "imagem": "/static/img/Red_Dead_Redemption_2.png"
+    },
+    {
+        "id": 4,
+        "nome": "Naruto Storm 4",
+        "preco": 79.9,
+        "genero": "Luta",
+        "imagem": "/static/img/naruto.webp"
+    },
+    {
+        "id": 5,
+        "nome": "FIFA 26",
+        "preco": 299,
+        "genero": "Esportes",
+        "imagem": "/static/img/fifaimg.avif"
+    },
+    {
+        "id": 6,
+        "nome": "Call of Duty: MW3",
+        "preco": 249.9,
+        "genero": "Tiro",
+        "imagem": "/static/img/MWIII_Capa.png"
+    }   
 ]

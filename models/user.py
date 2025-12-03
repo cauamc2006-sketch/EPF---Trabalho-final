@@ -5,11 +5,12 @@ from typing import List
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 class User:
-    def __init__(self, id: int, username: str, password: str, email: str ):
+    def __init__(self, id: int, username: str, password: str, email: str, is_admin=False ):
         self.id = id
         self.username = username
         self.password = password   
         self.email = email
+        self.is_admin = is_admin
 
     def check_password(self, password: str) -> bool:
         return self.password == password
@@ -27,7 +28,8 @@ class User:
             "id": self.id,
             "username": self.username,
             "password": self.password,
-            "email": self.email
+            "email": self.email,
+            "is_admin": self.is_admin
         }
 
     @staticmethod
@@ -36,7 +38,8 @@ class User:
             id=data["id"],
             username=data["username"],
             password=data["password"],
-            email=data.get("email")
+            email=data.get("email"),
+            is_admin=data.get("is_admin", False)
         )
 
 
@@ -70,7 +73,6 @@ class UserModel:
             if u.username == username:
                 return u
         return None
-
 
     def add_user(self, user: User):
         self.users.append(user)
