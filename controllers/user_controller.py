@@ -1,7 +1,8 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.user_service import UserService
-from bottle import response
+from bottle import Bottle, response
+
 
 class UserController(BaseController):
     def __init__(self, app):
@@ -30,12 +31,11 @@ class UserController(BaseController):
         if error:
             return self.render('login', error=error)
 
-        # SALVA COOKIE DO USUÁRIO
         response.set_cookie(
             "user_id",
             str(user.id),
             path="/",
-            max_age=60*60*24*7,  # 7 dias
+            max_age=60*60*24*7,  
             httponly=True
         )
 
@@ -58,13 +58,16 @@ class UserController(BaseController):
 
         return self.redirect('/login')
 
+    # Seu arquivo UserController (dentro da classe UserController)
+
     def logout(self):
         from bottle import response
 
-        response.delete_cookie("user_id", path="/")
+        # A chave "user_id" é o nome do cookie (não muda)
+        response.delete_cookie("user_id", path="/") 
+        
+        # Redireciona para a página de login
         return self.redirect('/login')
-
-
 
 user_routes = Bottle()
 UserController(user_routes)

@@ -49,8 +49,10 @@ poo-python-bottle-template/
 
 ### `controllers/`
 Contém as classes responsáveis por lidar com as rotas da aplicação. Exemplos:
-- `user_controller.py`: rotas para listagem, adição, edição e remoção de usuários.
+- `user_controller.py`: rotas para login, logout,  registro/cadastro de usuários.
 - `base_controller.py`: classe base com utilitários comuns.
+- `jogo_controler.py`: rotas para adicionar,editar e deletar jogo, entrar na pagina do jogo, rota para categorias e categorias de cada jogo.
+- `carrinho_controller.py`: rotas para carrinho, adicionar carrinho, remover carrinho, limpar carrinho e finalizar carrinho.
 
 ### `models/`
 Define as classes que representam os dados da aplicação. Exemplo:
@@ -67,8 +69,15 @@ Responsável por salvar, carregar e manipular dados usando arquivos JSON. Exempl
 ### `views/`
 Contém os arquivos `.tpl` utilizados pelo Bottle como páginas HTML:
 - `layout.tpl`: estrutura base com navegação e bloco `content`.
-- `home.tpl`: pagina principal.
-- `carrinho`: formulário para adicionar/remover jogos.
+- `home.tpl`: página principal.
+- `carrinho.tpl`: formulário para adicionar, remover jogos e finalizar compra.
+- `jogos.tpl`: página explorar jogos.
+- `jogo.tpl`: página detalhada de cada jogo
+- `categorias.tpl`: página de categorias
+- `categoria_detalhe.tpl`: página de cada categoria detalhada
+- `login.tpl` : página de login do usuário
+- `register.tpl`: página de registro/cadastro do usuário
+- `compra_finalizada.tpl`: página de compra 
 
 ### `static/`
 Arquivos estáticos como:

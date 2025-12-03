@@ -29,8 +29,13 @@
         <a href="/carrinho" class="carrinho-aba">CARRINHO</a>   
                  
         <a href="/categorias" class="categorias">CATEGORIAS</a>
-        <a href="/login" class="btn-login">LOGIN</a>
-        <a href="/register" class = "registro">REGISTRAR</a>
+
+        % if usuario_logado_id:
+            <a href="/logout" class="btn-logout">SAIR</a> 
+        % else:
+            <a href="/login" class="btn-login">LOGIN</a>
+            <a href="/register" class="registro">REGISTRAR</a>
+        % end 
         
             <form action="/" method="GET" class="search-form">
                 <input 

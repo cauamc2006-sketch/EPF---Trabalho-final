@@ -283,7 +283,6 @@ background: #2ecc71;
     background: #2ecc71;
 }
 
-/* Responsividade */
 @media(max-width: 768px) {
     .jogo-container {
         flex-direction: column;
@@ -447,4 +446,19 @@ a:hover {
     color: #00ff5a;
     font-weight: bold;
     margin-top: 10px;
+}
+.btn-logout {
+    background-color: #34db34;
+    color: white; 
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px; 
+    display: inline-block;
+    font-size: 14px; 
+    font-weight: bold; 
+    transition: 0.3s ease;
+}
+
+.btn-logout:hover {
+    cursor: pointer;
 }
