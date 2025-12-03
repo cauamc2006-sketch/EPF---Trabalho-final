@@ -72,11 +72,12 @@ Contém os arquivos `.tpl` utilizados pelo Bottle como páginas HTML:
 - `home.tpl`: página principal.
 - `carrinho.tpl`: formulário para adicionar, remover jogos e finalizar compra.
 - `jogos.tpl`: página explorar jogos.
-- `detalhes_jogo.tpl`: página detalhada de cada jogo
+- `jogo.tpl`: página detalhada de cada jogo
 - `categorias.tpl`: página de categorias
 - `categoria_detalhe.tpl`: página de cada categoria detalhada
 - `login.tpl` : página de login do usuário
 - `register.tpl`: página de registro/cadastro do usuário
+- `compra_finalizada.tpl`: página de compra 
 
 ### `static/`
 Arquivos estáticos como:
