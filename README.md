@@ -91,6 +91,10 @@ Armazena os arquivos `.json` que simulam o banco de dados:
 - `users.json`: onde os usuarios sao cadastrados e acessados.
 ---
 
+## Diagrama de classes
+link: https://drive.google.com/file/d/1o1bpSmNWSGOUyuCvAN0iEPPjFZ6nBuKo/view?usp=drive_link
+
+
 
 
 ## ▶️ Como Executar
