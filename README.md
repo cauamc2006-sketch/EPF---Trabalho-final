@@ -1,13 +1,13 @@
 # Projeto Template: POO com Python + Bottle + JSON
 
-# Lojinha de Jogos
+# Loja de Jogos
 
 Uma loja virtual simples de jogos construída em Python usando o micro-framework Bottle, com persistência via JSON — projeto para disciplina da universidade, com o prof. Lucas Boaventura.
 
 # Criadores
-
+- Cauã Mendes Coelho - 242032237
 - Ítalo Carlos Santana Dias do Nascimento- 242015639
-- Cauã Mendes Coelho- 242032237
+
 
 ## ✅ Funcionalidades
 
